@@ -14,7 +14,7 @@ class Dosen extends Pegawai implements PenilaianKinerja
     {
         parent::__construct($nip, $nama, $no_hp, $alamat);
         $this->nidn = $nidn;
-        $this->jumlah_sks = 24; // default
+        $this->jumlah_sks = 24;
     }
 
     public function bekerja(): void
