@@ -2,7 +2,7 @@
 
 namespace App\Akademik;
 
-class Pegawai
+abstract class Pegawai
 {
     public int $nip;
     public string $nama;
@@ -17,25 +17,10 @@ class Pegawai
         $this->alamat = $alamat;
     }
 
-    public function cekIn(): bool
+    abstract public function bekerja(): void;
+
+    public function cekIn(): void
     {
         echo $this->nama . " berhasil cek in.<br>";
-        return true;
-    }
-
-    public function cekOut(): bool
-    {
-        echo $this->nama . " berhasil cek out.<br>";
-        return true;
-    }
-
-    protected function getNoHp(): string
-    {
-        return $this->no_hp;
-    }
-
-    public function setNoHp(string $no_hp): void
-    {
-        $this->no_hp = $no_hp;
     }
 }
