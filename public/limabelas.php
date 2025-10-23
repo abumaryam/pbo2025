@@ -12,3 +12,5 @@ $dosen1->bekerja();
 $tendik1->bekerja();
 
 echo "Tunjangan kinerja dosen atas nama {$dosen1->nama} sebesar {$dosen1->hitungTunjanganKinerja()}";
+
+$tendik1->ajukanCuti(7);

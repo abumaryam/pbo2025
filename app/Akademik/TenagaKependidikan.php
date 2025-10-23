@@ -3,8 +3,10 @@
 namespace App\Akademik;
 
 use App\Akademik\Pegawai;
+use App\Akademik\PenilaianKinerja;
+use App\Akademik\DapatCuti;
 
-class TenagaKependidikan extends Pegawai implements PenilaianKinerja
+class TenagaKependidikan extends Pegawai implements PenilaianKinerja, DapatCuti
 {
     public int $gaji_pokok;
 
@@ -27,5 +29,10 @@ class TenagaKependidikan extends Pegawai implements PenilaianKinerja
     public function cuti(): void
     {
         echo $this->nama . " sedang mengambil cuti.<br>";
+    }
+
+    public function ajukanCuti(int $jumlahHari): void
+    {
+        echo "{$this->nama} sedang mengajukan cuti selama {$jumlahHari} hari";
     }
 }
